@@ -1,8 +1,8 @@
 import MovieCard from "./movieCard"
-
+import "./listaCard.css"
 function listaCard({ peliculas, onSeleccionar }) {
   return (
-    <div>
+    <div className="movies-grid">
       {peliculas.map((peli) => (
         <MovieCard
           key={peli.imdbID}
@@ -13,4 +13,5 @@ function listaCard({ peliculas, onSeleccionar }) {
     </div>
   )
 }
+
 export default listaCard

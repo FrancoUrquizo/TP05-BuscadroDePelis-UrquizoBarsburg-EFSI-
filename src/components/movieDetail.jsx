@@ -1,27 +1,29 @@
+import "./movieDetail.css"
 function movieDetail({ pelicula }) {
   if (!pelicula) {
     return (
-      <div>
+      <div style={{ textAlign: 'center', marginTop: '20px', color: '#888' }}>
         <p>Seleccioná una película para ver el detalle.</p>
       </div>
     )
   }
 
   return (
-    <div>
-      <h2>{pelicula.Title}</h2>
-
+    <div className="movie-detail-container">
       <img src={pelicula.Poster} alt={pelicula.Title} />
 
-      <p>Año: {pelicula.Year}</p>
-      <p>Género: {pelicula.Genre}</p>
-      <p>Director: {pelicula.Director}</p>
-      <p>Actores: {pelicula.Actors}</p>
-      <p>Sinopsis: {pelicula.Plot}</p>
-      <p>Duración: {pelicula.Runtime}</p>
-      <p>Idioma: {pelicula.Language}</p>
-      <p>País: {pelicula.Country}</p>
-      <p>Puntaje IMDb: {pelicula.imdbRating}</p>
+      <div className="movie-detail-info">
+        <h2>{pelicula.Title}</h2>
+        <p><strong>Año:</strong> {pelicula.Year}</p>
+        <p><strong>Género:</strong> {pelicula.Genre}</p>
+        <p><strong>Director:</strong> {pelicula.Director}</p>
+        <p><strong>Actores:</strong> {pelicula.Actors}</p>
+        <p><strong>Sinopsis:</strong> {pelicula.Plot}</p>
+        <p><strong>Duración:</strong> {pelicula.Runtime}</p>
+        <p><strong>Idioma:</strong> {pelicula.Language}</p>
+        <p><strong>País:</strong> {pelicula.Country}</p>
+        <p><strong>Puntaje IMDb:</strong> {pelicula.imdbRating}</p>
+      </div>
     </div>
   )
 }

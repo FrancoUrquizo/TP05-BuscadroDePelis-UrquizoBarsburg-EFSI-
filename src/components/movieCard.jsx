@@ -1,14 +1,18 @@
+import "./movieCard.css"
 function MovieCard({ pelicula, onSeleccionar }) {
   return (
-    <div>
+    <div className="movie-card">
       <img src={pelicula.Poster} alt={pelicula.Title} />
-      <h3>{pelicula.Title}</h3>
-      <p>Año: {pelicula.Year}</p>
-      <p>Tipo: {pelicula.Type}</p>
+      
+      <div className="movie-info">
+        <h3>{pelicula.Title}</h3>
+        <p>Año: {pelicula.Year}</p>
+        <p>Tipo: {pelicula.Type}</p>
 
-      <button onClick={() => onSeleccionar(pelicula.imdbID)}>
-        Ver detalle
-      </button>
+        <button onClick={() => onSeleccionar(pelicula.imdbID)}>
+          Ver detalle
+        </button>
+      </div>
     </div>
   )
 }
