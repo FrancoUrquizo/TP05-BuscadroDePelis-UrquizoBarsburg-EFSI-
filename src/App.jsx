@@ -24,7 +24,7 @@ function App() {
     const traerPeliculas = async () => {
       setLoading(true)
       setError("")
-
+      setDetallePelicula(null)
       const data = await buscarPeliculas(terminoBusqueda)
 
       if (data.Response === "False" || !data.Search || data.Search.length === 0) {
@@ -75,7 +75,7 @@ function App() {
 
       <form onSubmit={manejarSubmit}>
         <InputBusqueda class= "botonDebusqueda" busqueda={busqueda} setBusqueda={setBusqueda} />
-        <button type="submit">Buscar</button>
+        <button class= "botonBuscar" type="submit">Buscar</button>
       </form>
 
       {loading && <Loader />}
