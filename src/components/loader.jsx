@@ -1,5 +1,5 @@
 function loader() {
-  return <p>Cargando...</p>
+  return <p>Cargandooo...</p>
 }
 
 export default loader
